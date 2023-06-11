@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation</title>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/sprint2.css" />
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.card.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/sprint2.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <header>
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="#">HOTEL</a></div>
+          <ul>
+            <li class="navbar-item"><a href="index.html">Home</a></li>
+            <li class="navbar-item"><a href="about.html">About Us</a></li>
+            <li class="navbar-item"><a href="reservation.html">Reservation</a></li>
+            <li class="navbar-item"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="form-container">
+      <h1 class="body-title">HOTEL RESERVATİON</h1>
+      <form>
+        <div class="form-group">
+          <label class="form-label" for="name">Name:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="surname">Last Name:</label>
+          <input
+            class="form-input"
+            type="text"
+            id="surname"
+            name="surname"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">E-Mail:</label>
+          <input
+            class="form-input"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number:</label>
+          <input
+            class="form-input"
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+          />
+        </div>
+
+        <div class="form-group select">
+          <div>
+            <label class="form-label select" for="room-type">Room type:</label>
+            <select
+              class="form-select"
+              id="room-type"
+              name="room-type"
+              required
+            >
+              <option value="0">Please Select</option>
+              <option value="1">Standard Room(500TL)</option>
+              <option value="2">Family Room(800TL)</option>
+              <option value="3">Private Room(1000TL)</option>
+              <option value="4">Suite(2000TL)</option>
+            </select>
+          </div>
+          <div id="numguest" class="form-guest" min="0">
+            <label class="form-label" for="room-type">Number of Guests:</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label inline">
+            <label class="form-label" for="room-type">Arrival Time</label>
+            <label class="form-label second" for="room-type"
+              >Departure Time</label
+            >
+          </div>
+          <div class="form-input inline-container">
+            <input
+              class="form-input inline"
+              type="text"
+              id="arrivaltime"
+              name="arrivaltime"
+              required
+            />
+            <input
+              class="form-input inline"
+              type="text"
+              id="departuretime"
+              name="departuretime"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Free Pickup?:</label>
+          <div class="form-input">
+            <label>
+              <input type="radio" name="pickup" value="yes" required />
+              Yes Please! - Pick me up on arrival </label
+            ><br />
+            <label>
+              <input type="radio" name="pickup" value="no" required />
+              No thanks - I'll make my own way there
+            </label>
+          </div>
+        </div>
+        <div class="form-group amount">
+            <h2 class="form-total">Total Amount:</h2>
+            <p id="amount" style="margin-top: 10px; font-size: 30px;"></p>
+        </div>
+        <button type="button" class="c1-btn" onclick="onC1BtnClick()">Calculate</button>
+        
+        <div class="card-wrapper"></div>
+
+        <div class="form-group" id="form-card">
+          <input
+            placeholder="Card number"
+            type="tel"
+            name="number"
+            class="form-control"
+          /><br />
+          <input
+            placeholder="Full name"
+            type="text"
+            name="name"
+            class="form-control"
+          /><br />
+          <input
+            placeholder="MM/YY"
+            type="tel"
+            name="expiry"
+            class="form-control"
+          /><br />
+          <input
+            placeholder="CVC"
+            type="number"
+            name="cvc"
+            class="form-control"
+          />
+        </div>
+        <button class="form-submit" type="submit">Checkout</button>
+      </div>   
+        
+      </form>
+      
+    </div>
+  </body>
+</html>
